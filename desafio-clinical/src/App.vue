@@ -1,47 +1,68 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="@/assets/job-logo.png" alt="Jobs Logo" />
+        <span class="navbar-title">JobFinder</span>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/jobs">Jobs</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <TheWelcome />
   </main>
 </template>
 
+
+
 <style scoped>
-header {
-  line-height: 1.5;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.navbar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+  color: #007BFF;
 }
 </style>
