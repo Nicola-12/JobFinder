@@ -5,9 +5,9 @@
         </div>
         <ul class="navbar-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/jobs">Jobs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/">Jobs</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
         </ul>
     </nav>
 </template>
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
