@@ -1,4 +1,6 @@
-export const data = [
+import type { Job } from "./models/Job";
+
+export const data: Job[] = [
     {
         jobTitleText: "Software Engineer I (NST)",
         companyName: "Nintendo",
