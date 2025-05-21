@@ -47,11 +47,17 @@ function formatCurrency(amount: number, currency: Job['payCurrency']): string {
     display: flex;
     align-items: flex-start;
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-color);
     border-radius: 12px;
     padding: 16px;
     gap: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.job-card:hover {
+    box-shadow: 0 1px 8px var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 .company-logo {

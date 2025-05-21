@@ -11,13 +11,19 @@ const { defaultValue, onSearch } = defineProps<SearchFieldProps>();
 
 const searchValue = ref(defaultValue || '');
 
+function onEnterPressed(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+        onSearch?.(searchValue.value);
+    }
+}
 </script>
+
 <template>
     <div class="search-field">
         <div class="leading">
             <MagnifyIcon class="search-icon" />
         </div>
-        <input v-model="searchValue" type="text" placeholder="Search for jobs..." />
+        <input v-model="searchValue" @keyup.enter="onEnterPressed" type="text" placeholder="Search for jobs..." />
         <button v-on:click="() => onSearch?.(searchValue)" class="search-button">Search</button>
     </div>
 </template>

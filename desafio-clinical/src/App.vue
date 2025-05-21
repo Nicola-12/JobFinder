@@ -1,8 +1,36 @@
 <script lang="ts" setup>
+import { computed, ref } from 'vue';
 import JobCard from './components/JobCard.vue';
 import NavBar from './components/NavBar.vue';
 import SearchField from './components/SearchField.vue';
 import { data } from './data';
+
+const searchValue = ref('');
+
+const onSearch = (value: string) => {
+  searchValue.value = value;
+};
+
+const filteredJobs = computed(() => {
+  if (!searchValue.value) {
+    return data;
+  }
+
+  const lowerCaseSearchValue = searchValue.value.toLowerCase();
+
+  return data.filter((job) => {
+    const jobTitle = job.jobTitleText.toLowerCase();
+    const companyName = job.companyName.toLowerCase();
+    const locationName = job.locationName.toLowerCase();
+
+    return (
+      jobTitle.includes(lowerCaseSearchValue) ||
+      companyName.includes(lowerCaseSearchValue) ||
+      locationName.includes(lowerCaseSearchValue)
+    );
+  });
+});
+
 </script>
 
 <template>
@@ -10,9 +38,9 @@ import { data } from './data';
     <NavBar />
   </header>
   <main>
-    <SearchField :on-search="(val) => console.log(val)" />
+    <SearchField :on-search="onSearch" />
     <div class="job-list">
-      <JobCard v-for="(job, index) in data" :key="index" :job="job" />
+      <JobCard v-for="(job, index) in filteredJobs" :key="index" :job="job" />
     </div>
   </main>
 </template>
