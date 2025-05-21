@@ -1,3 +1,4 @@
+import { Currency, Payment } from "./enums/index";
 import type { Job } from "./models/Job";
 
 export const data: Job[] = [
@@ -8,8 +9,8 @@ export const data: Job[] = [
         locationName: "Redmond, WA",
         annualWage: 171505,
         rating: 4.1,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.BRL
     },
     {
         jobTitleText: "Back End Software Engineer",
@@ -18,8 +19,8 @@ export const data: Job[] = [
         locationName: "New York, NY",
         annualWage: 153781,
         rating: 3.4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Engineer - Python/AWS",
@@ -28,8 +29,8 @@ export const data: Job[] = [
         locationName: "Philadelphia, PA",
         annualWage: 143357,
         rating: 3.6,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.BRL
     },
     {
         jobTitleText: "Software Engineer",
@@ -38,8 +39,8 @@ export const data: Job[] = [
         locationName: "Honolulu, HI",
         annualWage: 179743,
         rating: 4.4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Engineer, Data Warehouse",
@@ -48,8 +49,8 @@ export const data: Job[] = [
         locationName: "San Francisco, CA",
         annualWage: 198245,
         rating: 4.2,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Engineer (SRE)",
@@ -58,8 +59,8 @@ export const data: Job[] = [
         locationName: "Lone Tree, CO",
         annualWage: 135000,
         rating: 4.8,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.HOURLY,
+        payCurrency: Currency.EUR
     },
     {
         jobTitleText: "Software Engineer II",
@@ -68,8 +69,8 @@ export const data: Job[] = [
         locationName: "Seattle, WA",
         annualWage: 162018,
         rating: 3.4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Engineer",
@@ -78,8 +79,8 @@ export const data: Job[] = [
         locationName: "Durham, NC",
         annualWage: 136323,
         rating: 4.2,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.HOURLY,
+        payCurrency: Currency.BRL
     },
     {
         jobTitleText: "Senior Software Engineer, Gameplay",
@@ -88,8 +89,8 @@ export const data: Job[] = [
         locationName: "Irvine, CA",
         annualWage: 190756,
         rating: 3.4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Senior Application Software Engineer (Test Automation)",
@@ -98,8 +99,8 @@ export const data: Job[] = [
         locationName: "Buffalo, NY",
         annualWage: 115000,
         rating: 0,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.HOURLY,
+        payCurrency: Currency.EUR
     },
     {
         jobTitleText: "Software Engineering",
@@ -108,8 +109,8 @@ export const data: Job[] = [
         locationName: "Wilmington, DE",
         annualWage: 168707,
         rating: 3.7,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Engineer",
@@ -118,8 +119,8 @@ export const data: Job[] = [
         locationName: "Milwaukee, WI",
         annualWage: 106937,
         rating: 4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.HOURLY,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Ground Software — Associate Engineer (Summer 2022)",
@@ -128,8 +129,8 @@ export const data: Job[] = [
         locationName: "San Francisco, CA",
         annualWage: 132118,
         rating: 5,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.BRL
     },
     {
         jobTitleText: "Junior Software Engineer, DevOps",
@@ -138,8 +139,8 @@ export const data: Job[] = [
         locationName: "Denver, CO",
         annualWage: 80000,
         rating: 4.5,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.EUR
     },
     {
         jobTitleText: "Software Developer",
@@ -148,8 +149,8 @@ export const data: Job[] = [
         locationName: "Wilmington, MA",
         annualWage: 138948,
         rating: 3.4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.HOURLY,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Associate Software Engineer",
@@ -158,8 +159,8 @@ export const data: Job[] = [
         locationName: "San Francisco, CA",
         annualWage: 160408,
         rating: 3.7,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Engineer",
@@ -168,8 +169,8 @@ export const data: Job[] = [
         locationName: "Houston, TX",
         annualWage: 138683,
         rating: 3.5,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.BRL
     },
     {
         jobTitleText: "Software Development Engineer",
@@ -178,8 +179,8 @@ export const data: Job[] = [
         locationName: "Lincoln, NE",
         annualWage: 127886,
         rating: 4.3,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.EUR
     },
     {
         jobTitleText: "Application Support Developer (Remote / Nationwide)",
@@ -188,8 +189,8 @@ export const data: Job[] = [
         locationName: "Grand Rapids, MI",
         annualWage: 127440,
         rating: 3.7,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Engineer, Software",
@@ -198,8 +199,8 @@ export const data: Job[] = [
         locationName: "Frisco, TX",
         annualWage: 127768,
         rating: 4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Entry Level C++ Software Developer",
@@ -208,8 +209,8 @@ export const data: Job[] = [
         locationName: "McLean, VA",
         annualWage: 146610,
         rating: 4.7,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.EUR
     },
     {
         jobTitleText: "Junior Software Engineer",
@@ -218,8 +219,8 @@ export const data: Job[] = [
         locationName: "Los Angeles, CA",
         annualWage: 142686,
         rating: 4.1,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.BRL
     },
     {
         jobTitleText: "Software Engineer",
@@ -228,8 +229,8 @@ export const data: Job[] = [
         locationName: "Dallas, TX",
         annualWage: 122965,
         rating: 4,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.DAILY,
+        payCurrency: Currency.USD
     },
     {
         jobTitleText: "Software Development Engineer II",
@@ -238,7 +239,7 @@ export const data: Job[] = [
         locationName: "New York, NY",
         annualWage: 169896,
         rating: 4.2,
-        payPeriod: "ANNUAL",
-        payCurrency: "USD"
+        payPeriod: Payment.ANNUAL,
+        payCurrency: Currency.EUR
     }
 ]

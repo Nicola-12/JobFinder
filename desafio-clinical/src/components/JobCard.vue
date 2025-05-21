@@ -30,6 +30,7 @@ function formatCurrency(amount: number, currency: Job['payCurrency']): string {
                 <p class="wage">
                     {{ formatCurrency(job.annualWage, job.payCurrency) }}
                     <span v-if="job.payPeriod === 'HOURLY'">/hr</span>
+                    <span v-else-if="job.payPeriod === 'DAILY'">/day</span>
                     <span v-else>/yr</span>
                 </p>
 

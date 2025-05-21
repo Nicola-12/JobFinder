@@ -1,3 +1,6 @@
+import type { Currency } from "@/enums/Currrency"
+import type { Payment } from "@/enums/Payment"
+
 export interface Job {
     jobTitleText: string
     companyName: string
@@ -5,6 +8,6 @@ export interface Job {
     locationName: string
     annualWage: number
     rating: number
-    payPeriod: 'ANNUAL' | 'HOURLY'
-    payCurrency: 'USD' | 'EUR' | 'BRL'
+    payPeriod: Payment
+    payCurrency: Currency
 }
