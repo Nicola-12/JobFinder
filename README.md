@@ -1,39 +1,26 @@
-# desafio-clinical
+# 🔍 Job Finder - Aplicação de Busca de Vagas
 
-This template should help get you started developing with Vue 3 in Vite.
+Este é um projeto desenvolvido com **Vue 3 + TypeScript** para listar e filtrar vagas de emprego. 
+A aplicação permite buscar por título, empresa ou localidade, além de aplicar filtros por forma de pagamento e moeda. 
+É ideal para praticar conceitos modernos do Vue, como composição com `setup`, componentes reutilizáveis e `v-model` personalizado.
 
-## Recommended IDE Setup
+## 🚀 Funcionalidades
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 🔎 Busca por nome da vaga, empresa ou localização
+- 📊 Filtros por forma de pagamento
+- 💰 Filtros por moeda
+- 🃏 Exibição de vagas em formato de cartões
+- ⬆️ Ordenação A–Z e Z–A
 
-## Type Support for `.vue` Imports in TS
+## 📦 Instalação
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+```bash
+# Clone o repositório
+git clone https://github.com/Nicola-12/JobFinder.git
+cd desafio-clinical
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# Instale as dependências
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Inicie o servidor de desenvolvimento
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
