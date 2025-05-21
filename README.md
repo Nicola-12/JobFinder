@@ -4,8 +4,6 @@ Este é um projeto desenvolvido com **Vue 3 + TypeScript** para listar e filtrar
 A aplicação permite buscar por título, empresa ou localidade, além de aplicar filtros por forma de pagamento e moeda. 
 É ideal para praticar conceitos modernos do Vue, como composição com `setup`, componentes reutilizáveis e `v-model` personalizado.
 
----
-
 ## 🚀 Funcionalidades
 
 - 🔎 Busca por nome da vaga, empresa ou localização
@@ -13,8 +11,6 @@ A aplicação permite buscar por título, empresa ou localidade, além de aplica
 - 💰 Filtros por moeda
 - 🃏 Exibição de vagas em formato de cartões
 - ⬆️ Ordenação A–Z e Z–A
-
----
 
 ## 📦 Instalação
 
