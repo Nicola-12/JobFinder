@@ -7,11 +7,13 @@ import { data } from './data';
 import ComboBox from './components/ComboBox.vue';
 import type { Option } from './models/Option';
 import { Payment } from './enums/Payment';
-import { Currency } from './enums';
+import { Currency, SortOrder } from './enums';
+import SortToggle from './components/SortToggle.vue';
 
 const searchValue = ref('');
 const paymentOption = ref<Option>();
 const currencyOption = ref<Option>();
+const sortOrder = ref<SortOrder>(SortOrder.ASC);
 
 const paymentOptions = ref<Option[]>(Object.values(Payment).map((payment) => ({
   label: payment,
@@ -30,7 +32,11 @@ const onSearch = (value: string) => {
 const filteredJobs = computed(() => {
   const lowerCaseSearchValue = searchValue.value.toLowerCase();
 
-  return data.filter((job) => {
+  return [...data].sort((a, b) =>
+    sortOrder.value === SortOrder.ASC
+      ? a.jobTitleText.localeCompare(b.jobTitleText)
+      : b.jobTitleText.localeCompare(a.jobTitleText)
+  ).filter((job) => {
     const jobTitle = job.jobTitleText.toLowerCase();
     const companyName = job.companyName.toLowerCase();
     const locationName = job.locationName.toLowerCase();
@@ -65,6 +71,7 @@ watch(
     <div class="combobox-filters">
       <ComboBox :placeholder="'Select a Payment'" :options="paymentOptions" v-model:selectedValue="paymentOption" />
       <ComboBox :placeholder="'Select a Currency'" :options="currenceOptions" v-model:selectedValue="currencyOption" />
+      <SortToggle v-model="sortOrder" />
     </div>
     <div class="job-list">
       <JobCard v-for="(job, index) in filteredJobs" :key="index" :job="job" />
